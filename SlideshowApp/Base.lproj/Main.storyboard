@@ -15,50 +15,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="y3A-o8-2il">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="y3A-o8-2il">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="762"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lv8-tp-pVE">
-                                <rect key="frame" x="116" y="752" width="21" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" backgroundImage="arrowshape.turn.up.left" catalog="system"/>
-                                <connections>
-                                    <action selector="btnPreview:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Y2-C3-0y7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyt-3n-vwc">
-                                <rect key="frame" x="183" y="700.5" width="48" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" backgroundImage="play" catalog="system"/>
-                                <connections>
-                                    <action selector="btnAuto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S0A-dA-cqL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNJ-1R-iCr">
-                                <rect key="frame" x="247" y="741" width="61" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="進む"/>
-                                <connections>
-                                    <action selector="btnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVf-4D-Tyh"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FwC-z2-Iz9">
+                                <rect key="frame" x="0.0" y="762" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lv8-tp-pVE">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="戻る"/>
+                                        <connections>
+                                            <action selector="btnPreview:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Y2-C3-0y7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNJ-1R-iCr">
+                                        <rect key="frame" x="138" y="0.0" width="138" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="進む"/>
+                                        <connections>
+                                            <action selector="btnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVf-4D-Tyh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyt-3n-vwc">
+                                        <rect key="frame" x="276" y="0.0" width="138" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="再生"/>
+                                        <connections>
+                                            <action selector="btnAuto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S0A-dA-cqL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Qyt-3n-vwc" firstAttribute="leading" secondItem="qNJ-1R-iCr" secondAttribute="trailing" id="ewv-Ly-a7h"/>
+                                    <constraint firstItem="qNJ-1R-iCr" firstAttribute="leading" secondItem="lv8-tp-pVE" secondAttribute="trailing" id="nDZ-ws-XI7"/>
+                                    <constraint firstAttribute="height" constant="100" id="xxg-qG-AlA"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="y3A-o8-2il" secondAttribute="bottom" constant="1" id="2Jk-Z5-0RI"/>
-                            <constraint firstItem="y3A-o8-2il" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2bf-54-lGY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qNJ-1R-iCr" secondAttribute="trailing" constant="106" id="6yC-b3-xtq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qNJ-1R-iCr" secondAttribute="bottom" constant="73" id="acd-bT-r3O"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lv8-tp-pVE" secondAttribute="bottom" constant="72.5" id="hIZ-H2-aN6"/>
-                            <constraint firstItem="lv8-tp-pVE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="m0g-Jw-vaR"/>
-                            <constraint firstItem="y3A-o8-2il" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vSY-Z5-AyO"/>
-                            <constraint firstItem="y3A-o8-2il" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vb6-Ip-55a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FwC-z2-Iz9" secondAttribute="bottom" id="7Uo-42-gkQ"/>
+                            <constraint firstItem="y3A-o8-2il" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8lM-kD-DHP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FwC-z2-Iz9" secondAttribute="trailing" id="H8s-Yu-JDS"/>
+                            <constraint firstItem="FwC-z2-Iz9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M2o-JS-Vo3"/>
+                            <constraint firstItem="FwC-z2-Iz9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ud8-WM-NZC"/>
+                            <constraint firstItem="FwC-z2-Iz9" firstAttribute="top" secondItem="y3A-o8-2il" secondAttribute="bottom" id="Yta-0g-Jhw"/>
+                            <constraint firstItem="y3A-o8-2il" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YwZ-TS-p5U"/>
+                            <constraint firstItem="y3A-o8-2il" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nU3-kY-ijJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="ansImage" destination="y3A-o8-2il" id="2zB-sG-EPz"/>
+                        <outlet property="btnAuto" destination="Qyt-3n-vwc" id="Kmd-kn-wap"/>
+                        <outlet property="btnNext" destination="qNJ-1R-iCr" id="477-Mr-tfl"/>
+                        <outlet property="btnPreview" destination="lv8-tp-pVE" id="Rjl-Ut-lMW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -82,8 +102,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="2" width="1616" height="1080"/>
-        <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
-        <image name="play" catalog="system" width="120" height="128"/>
+        <image name="0" width="1616" height="1080"/>
     </resources>
 </document>
