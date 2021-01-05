@@ -69,6 +69,17 @@ class ViewController: UIViewController {
             btnPreview.isEnabled = false
 
         }else{
+            self.timerStop()
+//            self.timer.invalidate()   // タイマーを停止する
+//            self.timer = nil          // startTimer() の self.timer == nil で判断するために、 self.timer = nil としておく
+//            btnAuto.setTitle("再生", for:UIControl.State.normal)
+//            btnNext.isEnabled = true
+//            btnPreview.isEnabled = true
+        }
+    }
+    
+    func timerStop(){
+        if self.timer != nil {
             self.timer.invalidate()   // タイマーを停止する
             self.timer = nil          // startTimer() の self.timer == nil で判断するために、 self.timer = nil としておく
             btnAuto.setTitle("再生", for:UIControl.State.normal)
@@ -80,6 +91,8 @@ class ViewController: UIViewController {
 //  画像タップでの遷移
     @IBAction func tapAction(_ sender: UIStoryboardSegue) {
         self.performSegue(withIdentifier: "toSecond", sender: nil)
+        
+        self.timerStop()
     }
     
 //  遷移の際に画像を送る
@@ -88,5 +101,9 @@ class ViewController: UIViewController {
            let secondViewController:SecondViewController = segue.destination as! SecondViewController
            // 遷移先のSecondViewControllerで宣言しているx, selectedImgに値を代入して渡す
            secondViewController.selectedImg = UIImage(named:"\(i)")
+    }
+    
+//    遷移先から戻る際に呼ばれるメソッド
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
 }
